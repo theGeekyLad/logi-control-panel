@@ -19,6 +19,8 @@ A rudimentary GUI contol panel for Logitech keyboards on Linux built on top of [
 - Clone / download as ZIP this repo
 - Extract ZIP and open extracted directory
 - Open terminal here
+- `python -m pip install PyGObject`
+- `python -m pip install dbus-python`
 - `npm i`
 - `npm run start`
 
