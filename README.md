@@ -2,6 +2,8 @@
 
 A rudimentary GUI contol panel for Logitech keyboards on Linux built on top of [this awesome CLI](https://github.com/MatMoul/g810-led).
 
+![Logi Control Panel - Screenshot](https://github.com/theGeekyLad/logi-control-panel/blob/master/screenshot.png)
+
 ## Supported Boards
 
 - Logitech G413 Carbon _(monochrome red LEDs)_
