@@ -4,6 +4,8 @@ A rudimentary GUI contol panel for Logitech keyboards on Linux built on top of [
 
 ![Logi Control Panel - Screenshot](https://github.com/theGeekyLad/logi-control-panel/blob/master/screenshot.png)
 
+Watch the demo [here](https://youtu.be/rWDX9CpRSdQ)!
+
 ## Supported Boards
 
 - Logitech G413 Carbon _(monochrome red LEDs)_
