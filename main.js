@@ -7,7 +7,7 @@ let process = null
 function createWindow() {
     const win = new BrowserWindow({
         width: 600,
-        height: 250,
+        height: 210,
         webPreferences: {
             nodeIntegration: true
         }
