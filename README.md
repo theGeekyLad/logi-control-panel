@@ -11,6 +11,7 @@ A rudimentary GUI contol panel for Logitech keyboards on Linux built on top of [
 ## Prerequisites
 
 - Python 3.x
+- Node.js
 - A supported board _of course_
 - Ensure the LEDs are ON on the keyboard _(usually `Fn+F7`)_
 
