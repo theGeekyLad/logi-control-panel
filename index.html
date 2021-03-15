@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Logi Control Panel</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        function pulse() {
+            console.log('Pulse...')
+            ipcRenderer.send('pulse-led', document.getElementById('pulse-interval').value);
+        }
+
+        function on() {
+            console.log('On...')
+            ipcRenderer.send('on-led');
+        }
+
+        function off() {
+            console.log('Off...')
+            ipcRenderer.send('off-led');
+        }
+
+        function change(event) {
+            var val = Number(event.target.value).toString(16);
+            if (val.length == 1)
+                val = '0' + val;
+            ipcRenderer.send('change-led', val);
+        }
+
+        function hookNotifications() {
+            ipcRenderer.send('hook-notifications');
+        }
+
+        function unhookNotifications() {
+            ipcRenderer.send('unhook-notifications');
+        }
+    </script>
+</head>
+
+<body style="background: white;">
+    <h2>Logi Control Panel</h2>
+    <button onclick="pulse()">Start pulsing LED...</button>
+    <input id="pulse-interval" type="number" value="2">
+    <button onclick="on()">ON</button>
+    <button onclick="off()">OFF</button>
+    <input type="range" onchange="change(event)" id="brightness" name="brightness" min="0" max="255">
+    <button onclick="hookNotifications()">Hook into notifications</button>
+    <button onclick="unhookNotifications()">Unhook from notifications</button>
+    <h5>Made with &hearts; by theGeekyLad</h5>
+</body>
+
+</html>

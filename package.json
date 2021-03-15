@@ -1,0 +1,15 @@
+{
+  "name": "logi-control-panel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "theGeekyLad",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.3.0"
+  }
+}
