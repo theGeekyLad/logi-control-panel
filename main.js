@@ -81,7 +81,7 @@ ipcMain.on('change-led', (event, val) => {
 
 ipcMain.on('hook-notifications', (event) => {
     console.log('Hooking...')
-    process = exec('python3 /home/thegeekylad/Projects/g413-dbus-led/main.py', (error, stdout, stderr) => {
+    process = exec('python3 ./hook-notifications.py', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
             return;
