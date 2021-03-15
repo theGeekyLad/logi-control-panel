@@ -22,7 +22,10 @@ A rudimentary GUI contol panel for Logitech keyboards on Linux built on top of [
 - `python -m pip install PyGObject`
 - `python -m pip install dbus-python`
 - `npm i`
-- `npm run start`
+
+## Run
+
+`npm run start`
 
 ## Foibles
 
