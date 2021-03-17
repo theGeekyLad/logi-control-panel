@@ -2,12 +2,12 @@ const { app, BrowserWindow } = require('electron')
 const { ipcMain } = require('electron')
 const { exec } = require('child_process');
 
-let process = null
+// let process = null
 
 function createWindow() {
     const win = new BrowserWindow({
         width: 600,
-        height: 210,
+        height: 200,
         webPreferences: {
             nodeIntegration: true
         }
@@ -19,9 +19,9 @@ function createWindow() {
 app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit()
-    }
+    // if (process.platform !== 'darwin') {
+    app.quit()
+    // }
 })
 
 app.on('activate', () => {
