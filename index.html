@@ -7,6 +7,8 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <script>
         const { ipcRenderer } = require('electron');
+        
+        let isHooked = false;
 
         function pulse() {
             console.log('Pulse...')
@@ -32,10 +34,12 @@
 
         function hookNotifications() {
             ipcRenderer.send('hook-notifications');
+            document.getElementById('button-hook').setAttribute('disabled', true);
         }
 
         function unhookNotifications() {
             ipcRenderer.send('unhook-notifications');
+            document.getElementById('button-hook').removeAttribute('disabled');
         }
     </script>
 </head>
@@ -47,7 +51,7 @@
     <button onclick="on()">ON</button>
     <button onclick="off()">OFF</button>
     <input type="range" onchange="change(event)" id="brightness" name="brightness" min="0" max="255">
-    <button onclick="hookNotifications()">Hook into notifications</button>
+    <button id="button-hook" onclick="hookNotifications()">Hook into notifications</button>
     <button onclick="unhookNotifications()">Unhook from notifications</button>
     <h5>Made with &hearts; by theGeekyLad</h5>
 </body>
